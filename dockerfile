@@ -16,10 +16,10 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install wget zip
 
 ## Fix locale.
 # Set the locale
-RUN locale-gen es_VE.UTF-8  
 ENV LANG es_VE.UTF-8  \
  LANGUAGE es_VE:es  \
  LC_ALL es_VE.UTF-8  \
+RUN locale-gen es_VE.UTF-8
 
 PG_APP_HOME="/etc/docker-postgresql" \
     PG_VERSION=9.4 \
